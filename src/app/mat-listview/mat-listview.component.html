@@ -1,0 +1,23 @@
+<mat-list>
+  <mat-list-item *ngFor="let car of cars">
+    <img mat-list-avatar src="{{car.giphyUrl}}" alt="{{car.name}}">
+    <h3 mat-line>{{car.name}}</h3>
+  </mat-list-item>
+</mat-list>
+<hr/>
+<mat-list>
+  <mat-list-item> Pepper </mat-list-item>
+  <mat-list-item> Salt </mat-list-item>
+  <mat-list-item> Paprika </mat-list-item>
+ </mat-list>
+
+ <hr/>
+ <mat-selection-list #thecars>
+  <mat-list-option *ngFor="let car of cars">
+    {{car.name}}
+  </mat-list-option>
+</mat-selection-list>
+<p>
+  Options selected: {{thecars.selectedOptions.selected.length}}
+</p>
+
